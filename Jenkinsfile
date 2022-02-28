@@ -15,11 +15,11 @@
 
 //Declarative
 
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('Build'){
-            steps{
+    stages {
+        stage('Build') {
+            steps {
                 echo "Build"
             }
         }
@@ -28,10 +28,11 @@ pipeline{
                 echo "Test"
             }
         }
-        stage{
-            steps('Integration Test')
+        stage('Integration Test'){
+            steps{
                 echo "Integration Test"
             }
+        }
     }
 
 }
