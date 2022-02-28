@@ -42,7 +42,7 @@ pipeline {
         success {
             echo "I run when everything is success"
         }
-        faiure {
+        failure {
             echo "I run when anything is fail"
         }
     }
