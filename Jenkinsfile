@@ -33,17 +33,6 @@ pipeline {
                 echo "Integration Test"
             }
         }
-    }post {
-        always{
-            echo "I run awesome.I am fine"
-        }
-        success{
-            echo "I run when everything is success"
-        }
-        faiure{
-            echo "I run when anything is fail"
-        }
-    }
-
+    } 
 
 }
