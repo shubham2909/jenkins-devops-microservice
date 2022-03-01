@@ -72,7 +72,7 @@ pipeline {
             steps {
                 //docker build -t shubham291110/currency-exchange-jenkins-push:${env.BUILD.TAG}
                 script{
-                    dockerImage = docker.build("shubham291110/currency-exchange-jenkins-push:{$env.BUILD_TAG}")
+                    dockerImage = docker.build("shubham291110/currency-exchange-jenkins-push:${env.BUILD_TAG}")
                 }
            }
     } 
