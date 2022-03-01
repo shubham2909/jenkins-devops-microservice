@@ -39,14 +39,26 @@ pipeline {
                 echo "JOB_NAME = $env.JOB_NAME"
             }
         }
-        stage('Test'){
+        //stage('Test'){
+            //steps{
+                //echo "Test"
+            //}
+        //}
+        stage('Compile'){
             steps{
-                echo "Test"
+                sh "mvn clean compile"
             }
         }
+        
+        stage('Test'){
+            steps{
+                sh "mvn test"
+            }
+        }
+        
         stage('Integration Test'){
             steps{
-                echo "Integration Test"
+                sh "mvn failsafe:integration-test failsafe:verify"
             }
         }
     } 
